@@ -492,9 +492,9 @@ def t_OPEN_ENTRY (t):
       return t
 
 def t_CLOSE_ENTRY (t):
-      r'</entry>'
-      html.write('</td>\n')
-      return t
+    r'</entry>'
+    html.write('</td>\n')
+    return t
 
 
 def t_TAB(t):
@@ -505,10 +505,10 @@ def t_ESPACIO(t):
     r'\ '
     pass
 
-def t_TEXTO(t): 
-    r'[^<>]+'
-    html.write(t.value)
-    return t
+# def t_TEXTO(t): 
+#     r'[^<>]+'
+#     html.write(t.value)
+#     return t
 
 # Manejo de errores, solo lo usamos debido a que sin esto, no se ejecuta
 def t_error(t):  
